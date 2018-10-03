@@ -1,6 +1,7 @@
-
-
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintStream;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,9 +20,13 @@ public class LoginCheck extends HttpServlet {
      */
     public LoginCheck() {
         super();
-       
     }
-
+    
+    private String uname;
+	private String password;
+  
+	
+	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -34,10 +39,21 @@ public class LoginCheck extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String uname=request.getParameter("uname");
-		String password=request.getParameter("password");
+		this.uname=request.getParameter("uname");
+		this.password=request.getParameter("password");
 		
-		if (uname.equals("adm") && password.equals("1234")){
+		/*if (getUname().equals("adm") && getPassword().equals("1234")){
+			response.sendRedirect("Home_adm.jsp");
+		}
+		else{
+			response.sendRedirect("error.jsp");
+		}*/
+		
+		LoginDAO l = new LoginDAO();
+		
+		//System.out.println(l.procurar_id());
+		
+		if (uname.equals("admin") && password.equals("1234") && (l.procurar_id() != null)){
 			response.sendRedirect("Home_adm.jsp");
 		}
 		else{
