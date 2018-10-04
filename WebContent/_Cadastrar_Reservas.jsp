@@ -4,21 +4,16 @@
 <html>
 
 <head>
-	<title>Locadora Feliz</title>
-	  
-	<meta name="description" content="site para o trabalho de engenharia lab" />
-	  
-	<meta name="keywords" content="locadora, alugar, carros" />
-	  
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	  
-	<link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
-	<link rel="stylesheet" type="text/css" href="style/menu.css" title="style" />
+  <title>Locadora Feliz</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+  <link rel="stylesheet" type="text/css" href="style/menu.css" title="style" />
 </head>
 
 <body>
-
   <div id="main">
     <div id="header">
       <div id="logo">
@@ -28,13 +23,11 @@
         </div>
       </div>
       
-      
-	      <nav>
+      		<nav>
 			  <ul class="menu">
-			        <li><a href="#">Inicio</a></li>
+			        <li><a href="Home_adm.jsp">Inicio</a></li>
 			        <li><a href="#">Gerenciar Reservas</a>
 			        	<ul>
-			        		<li><a href="_Cadastrar_Reservas.jsp">Cadastrar Reservas</a></li>
 			        		<li><a href="#">Editar Reservas</a></li>
 			        		<li><a href="#">Remover Reservas</a></li>                    
 			       		</ul>
@@ -65,7 +58,6 @@
 		</nav>
       
     </div>
-	
     <div id="site_content">
       <div class="sidebar">
         <!-- sidebar itens -->
@@ -77,25 +69,24 @@
         <h3>Carros Classicos</h3>
         <img src="imagens/img3.jpg">
       </div>
-	  
       <div id="content">
-        <!-- mtos conteudos chatos -->
-        <h1>Bem vindo administrador ao site Locadora Feliz</h1>
-        <p>Nessa pagina as funções acima são de uso exclusivo dos <strong>administradores</strong> e colaboradores do site Locadora Feliz</p>
+        <!-- conteudo -->
+        <h1>Gerenciar Reservas</h1>
 		
-		<h2>Melhor compatibilidade com os Browsers</h2>
-        <ul>
-          <li>Internet Explorer</li>
-          <li>FireFox</li>
-          <li>Google Chrome</li>
-        </ul>
+		<div id="DataGridView" style="width:600px; height:600px; background-color:gray">
+		
+		</div>
+		<br>
+		
+		<a href="#" class="btn btn-green">Cadastrar Reservas</a>
+		<a href="#" class="btn btn-green">Editar Reservas</a>
+		<a href="#" class="btn btn-green">Remover Reservas</a>
+		
       </div>
     </div>
-	
     <div id="footer">
       <a>Copyright &copy; Locadora Feliz | 2018 | Trabalho de Engenharia de Software Lab</a>
     </div>
-	
   </div>
 </body>
 </html>

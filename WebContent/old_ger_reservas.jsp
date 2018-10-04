@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,7 +8,9 @@
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+  <link rel="stylesheet" type="text/css" href="style/menu.css" title="style" />
 </head>
 
 <body>
@@ -20,16 +22,42 @@
           <h2>Bem Vindo Administrador</h2>
         </div>
       </div>
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="Home_adm.jsp">Home</a></li>
-		  <li class="selected"><a href="ger_reservas.jsp">Gerenciar Reservas</a></li>
-          <li><a href="alugar_carro_reservado.jsp">Alugar Carro Reservado</a></li>
-          <li><a href="receber_carro_alugado.jsp">Receber Carro Alugado</a></li>
-          <li><a href="visualizar_situacao_frota.jsp">Visualizar Situação da Frota</a></li>
-        </ul>
-      </div>
+      
+      		<nav>
+			  <ul class="menu">
+			        <li><a href="Home_adm.jsp">Inicio</a></li>
+			        <li><a href="#">Gerenciar Reservas</a>
+			        	<ul>
+			        		<li><a href="_Cadastrar_Reservas.jsp">Cadastrar Reservas</a></li>
+			        		<li><a href="#">Editar Reservas</a></li>
+			        		<li><a href="#">Remover Reservas</a></li>                    
+			       		</ul>
+			        </li>
+			        <li><a href="#">Alugar Carro Reservado</a>
+			        	<ul>
+			        		<li><a href="#">Web Design</a></li>
+			        		<li><a href="#">SEO</a></li>
+			        		<li><a href="#">Design</a></li>                    
+			       		</ul>
+			        </li>
+			        <li><a href="#">Receber Carro Alugado</a>
+			        	<ul>
+			        		<li><a href="#">Web Design</a></li>
+			        		<li><a href="#">SEO</a></li>
+			        		<li><a href="#">Design</a></li>                    
+			       		</ul>
+			        </li>
+			        <li><a href="#">Visualizar Cituação Frota</a>
+			        	<ul>
+			        		<li><a href="#">Web Design</a></li>
+			        		<li><a href="#">SEO</a></li>
+			        		<li><a href="#">Design</a></li>                    
+			       		</ul>
+			        </li>
+			        <li><a href="Index.jsp">Sair</a></li>                
+			</ul>
+		</nav>
+      
     </div>
     <div id="site_content">
       <div class="sidebar">
