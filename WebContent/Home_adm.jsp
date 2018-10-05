@@ -35,29 +35,20 @@
 			        <li><a href="#">Gerenciar Reservas</a>
 			        	<ul>
 			        		<li><a href="_Cadastrar_Reservas.jsp">Cadastrar Reservas</a></li>
-			        		<li><a href="#">Editar Reservas</a></li>
-			        		<li><a href="#">Remover Reservas</a></li>                    
+			        		<li><a href="_Editar_Reservas.jsp">Editar Reservas</a></li>
+			        		<li><a href="_Remover_Reservas.jsp">Remover Reservas</a></li>                    
 			       		</ul>
 			        </li>
-			        <li><a href="#">Alugar Carro Reservado</a>
-			        	<ul>
-			        		<li><a href="#">Web Design</a></li>
-			        		<li><a href="#">SEO</a></li>
-			        		<li><a href="#">Design</a></li>                    
-			       		</ul>
+			        <li>
+			        	<a href="_Alugar_Carro_Reservado.jsp">Alugar Carro Reservado</a>
 			        </li>
-			        <li><a href="#">Receber Carro Alugado</a>
-			        	<ul>
-			        		<li><a href="#">Web Design</a></li>
-			        		<li><a href="#">SEO</a></li>
-			        		<li><a href="#">Design</a></li>                    
-			       		</ul>
+			        <li>
+			        	<a href="_Receber_carro_alugado.jsp">Receber Carro Alugado</a>
 			        </li>
 			        <li><a href="#">Visualizar Cituação Frota</a>
 			        	<ul>
-			        		<li><a href="#">Web Design</a></li>
-			        		<li><a href="#">SEO</a></li>
-			        		<li><a href="#">Design</a></li>                    
+			        		<li><a href="_Cadastrar_Veiculos.jsp">Cadastrar Veiculos</a></li>
+			        		<li><a href="_Visualizar_situacao_frota.jsp">Visualizar Frota</a></li>                   
 			       		</ul>
 			        </li>
 			        <li><a href="Index.jsp">Sair</a></li>                

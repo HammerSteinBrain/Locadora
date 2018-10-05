@@ -23,11 +23,12 @@
         </div>
       </div>
       
-      		<nav>
+      <nav>
 			  <ul class="menu">
 			        <li><a href="Home_adm.jsp">Inicio</a></li>
 			        <li><a href="#">Gerenciar Reservas</a>
 			        	<ul>
+			        		<li><a href="_Cadastrar_Reservas.jsp">Cadastrar Reservas</a></li>
 			        		<li><a href="_Editar_Reservas.jsp">Editar Reservas</a></li>
 			        		<li><a href="_Remover_Reservas.jsp">Remover Reservas</a></li>                    
 			       		</ul>
@@ -36,7 +37,7 @@
 			        	<a href="_Alugar_Carro_Reservado.jsp">Alugar Carro Reservado</a>
 			        </li>
 			        <li>
-			        	<a href="_Receber_carro_alugado.jsp">Receber Carro Alugado</a>
+			        	<a href="#">Receber Carro Alugado</a>
 			        </li>
 			        <li><a href="#">Visualizar Cituação Frota</a>
 			        	<ul>
@@ -60,33 +61,39 @@
         <h3>Carros Classicos</h3>
         <img src="imagens/img3.jpg">
       </div>
+      
       <div id="content">
         <!-- conteudo -->
-        <h1>Cadastrar Reservas</h1>
+        
+        <h1>Editar Reservas</h1>
 		
 		<form>
-			  Nome do cliente:<br>
-			  <input type="text" name="nome_cliente"><br>
-			  CPF:<br>
-			  <input type="text" name="cpf"><br>
-			  Telefone:<br>
-			  <input type="text" name="telefone"><br>
-			  Hora Inicio da Reserva:<br>
-			  <input type="text" name="hr_ini_reserva"><br>
-			  Termino Previsto da reserva:<br>
-			  <input type="text" name="term_reserva"><br>
-			  Valor total previsto:<br>
-			  <input type="text" name="vlr_total_prev"><br>
-			  Carro:<br>
-			  <input type="text" name="carro">
+			Codigo do contrato:<br>
+			<input type="text" name="nome_cliente">
+			<a href="#" class="btn btn-purple" >Procurar pelo codigo</a>
+			<br>
+			Nome do cliente:<br>
+			<input type="text" name="nome_cliente"><br>
+			CPF:<br>
+			<input type="text" name="cpf"><br>
+			Telefone:<br>
+			<input type="text" name="telefone"><br>
+			Hora Inicio da Reserva:<br>
+			<input type="text" name="hr_ini_reserva"><br>
+			Carro:<br>
+			<input type="text" name="carro"><br>
+			
+			Estado atual de conservação do veiculo:<br>
+			<input type="text" name="status_conser_veiculo">
 		</form>
 		<br>
 		
-		<a href="#" class="btn btn-green" >Cadastrar Reserva</a>
-		<a href="#" class="btn btn-green">Limpar</a>
+		<a href="#" class="btn btn-green" >Registrar Retorno do Veiculo</a>
+		<a href="#" class="btn btn-green" >Cancelar</a>
 		
       </div>
     </div>
+    
     <div id="footer">
       <a>Copyright &copy; Locadora Feliz | 2018 | Trabalho de Engenharia de Software Lab</a>
     </div>

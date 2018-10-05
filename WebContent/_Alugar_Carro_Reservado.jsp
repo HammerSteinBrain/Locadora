@@ -28,12 +28,13 @@
 			        <li><a href="Home_adm.jsp">Inicio</a></li>
 			        <li><a href="#">Gerenciar Reservas</a>
 			        	<ul>
+			        		<li><a href="_Cadastrar_Reservas.jsp">Cadastrar Reservas</a></li>
 			        		<li><a href="_Editar_Reservas.jsp">Editar Reservas</a></li>
-			        		<li><a href="_Remover_Reservas.jsp">Remover Reservas</a></li>                    
+			        		<li><a href="_Remover_Reservas.jsp">Remover Reservas</a></li>                     
 			       		</ul>
 			        </li>
 			        <li>
-			        	<a href="_Alugar_Carro_Reservado.jsp">Alugar Carro Reservado</a>
+			        	<a href="#">Alugar Carro Reservado</a>
 			        </li>
 			        <li>
 			        	<a href="_Receber_carro_alugado.jsp">Receber Carro Alugado</a>
@@ -62,31 +63,39 @@
       </div>
       <div id="content">
         <!-- conteudo -->
-        <h1>Cadastrar Reservas</h1>
-		
+        <h1>Alugar Carro Reservado</h1>
+
 		<form>
-			  Nome do cliente:<br>
-			  <input type="text" name="nome_cliente"><br>
-			  CPF:<br>
-			  <input type="text" name="cpf"><br>
-			  Telefone:<br>
-			  <input type="text" name="telefone"><br>
-			  Hora Inicio da Reserva:<br>
-			  <input type="text" name="hr_ini_reserva"><br>
-			  Termino Previsto da reserva:<br>
-			  <input type="text" name="term_reserva"><br>
-			  Valor total previsto:<br>
-			  <input type="text" name="vlr_total_prev"><br>
-			  Carro:<br>
-			  <input type="text" name="carro">
+			Nome do cliente:<br>
+			<input type="text" name="nome_cliente"><br>
+			CPF:<br>
+			<input type="text" name="cpf"><br>
+			Telefone:<br>
+			<input type="text" name="telefone"><br>
+			
+			Carro:<br>
+			<input type="text" name="carro"><br>
+			Hora Retirada:<br>
+			<input type="text" name="hr_retirada"><br>
+			Hora devolução:<br>
+			<input type="text" name="hr_devolucao"><br>
+			Valor total da Reserva:<br>
+			<input type="text" name="vlr_total_res"><br>
+			Valor Pago antecipadamente:<br>
+			<input type="text" name="vl_pgto_anteci"><br>
+			Valor Pago na Devolução:<br>
+			<input type="text" name="vl_pgto_devolucao"><br>
 		</form>
+
 		<br>
 		
-		<a href="#" class="btn btn-green" >Cadastrar Reserva</a>
-		<a href="#" class="btn btn-green">Limpar</a>
+		<a href="#" class="btn btn-green" >Gerar Contrato de Aluguel</a>
+		<a href="#" class="btn btn-green">Cancelar</a>
 		
       </div>
     </div>
+    
+    
     <div id="footer">
       <a>Copyright &copy; Locadora Feliz | 2018 | Trabalho de Engenharia de Software Lab</a>
     </div>

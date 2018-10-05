@@ -15,7 +15,14 @@ p
   line-height: 1.7em;}
 
 img
-{ border: 0;}
+{ 
+border: 1px solid #ddd;
+border-radius: 4px;
+padding: 5px;
+width: 200px;
+max-width: 100%;
+height: auto;
+}
 
 h1, h2, h3, h4, h5, h6 
 { font: normal 175% 'century gothic', arial, sans-serif;
@@ -150,6 +157,16 @@ blockquote
 
 .btn-green{
 	background:green;
+	color:#fff;
+	box-shadow:0 5px 0 #006000;
+}
+.btn-red{
+	background:red;
+	color:#fff;
+	box-shadow:0 5px 0 #006000;
+}
+.btn-purple{
+	background:purple;
 	color:#fff;
 	box-shadow:0 5px 0 #006000;
 }

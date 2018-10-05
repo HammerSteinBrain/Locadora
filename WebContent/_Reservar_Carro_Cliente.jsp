@@ -30,9 +30,9 @@
       
       <nav>
 			  <ul class="menu">
-			        <li><a href="#">Inicio</a></li>
+			        <li><a href="Home_Cliente.jsp">Inicio</a></li>
 			        <li>
-			        	<a href="_Reservar_Carro_Cliente.jsp">Reservar Carro</a>
+			        	<a href="_#">Reservar Carro</a>
 			        </li>
 			        <li>
 			        <li><a href="Index.jsp">Sair</a></li>                
@@ -58,12 +58,35 @@
         <h1>Bem vindo ao site Locadora Feliz</h1>
         <p>Temos diversos veiculos para todos os gostos, estilos e bolsos</p>
 		<img src="imagens/img5.jpg">
-		<h2>Melhor compatibilidade com os Browsers</h2>
-        <ul>
-          <li>Internet Explorer</li>
-          <li>FireFox</li>
-          <li>Google Chrome</li>
-        </ul>
+		<br>
+		
+		<h2>Opções de Veiculos para locação disponiveis</h2>
+         <select name="cars">
+			  <option value="volvo">Volvo</option>
+			  <option value="saab">Saab</option>
+			  <option value="fiat">Fiat</option>
+			  <option value="audi">Audi</option>
+		</select>
+		<br>
+		
+		
+		<br>
+		Nome: Volvo<br>
+		Categoria: SUV<br>
+		Ano: 2017<br>
+		Placa: KLO-5485<br>
+		Modelo: Generic-for-this-trab<br>
+		Cor: Pink<br>
+		Estado de Conservação: Usado<br>
+		Quilometragem: 120.000 km<br>
+		Tanque de combustivel: 20 Litros restantes<br>
+		
+		
+		<br><a href="#" class="btn btn-purple" >Efetuar Reserva</a>
+		<a href="#" class="btn btn-red" >Cancelar</a>
+		
+		<p>Para mais detalhes consulte nossas lojas!</p>
+		
       </div>
     </div>
 	
