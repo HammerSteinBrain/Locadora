@@ -37,7 +37,7 @@
 			        <li>
 			        <li><a href="Index.jsp">Sair</a></li>                
 			</ul>
-		</nav>
+	</nav>
       
     </div>
 	
@@ -54,6 +54,8 @@
       </div>
 	  
       <div id="content">
+      
+      <form action="Requests" method="post" name="request" id="request">
         <!-- mtos conteudos chatos -->
         <h1>Bem vindo ao site Locadora Feliz</h1>
         <p>Temos diversos veiculos para todos os gostos, estilos e bolsos</p>
@@ -61,32 +63,54 @@
 		<br>
 		
 		<h2>Opções de Veiculos para locação disponiveis</h2>
-         <select name="cars">
-			  <option value="volvo">Volvo</option>
-			  <option value="saab">Saab</option>
-			  <option value="fiat">Fiat</option>
-			  <option value="audi">Audi</option>
-		</select>
 		<br>
-		
-		
+		<img src="imagens/volvo.jpg">
 		<br>
 		Nome: Volvo<br>
 		Categoria: SUV<br>
 		Ano: 2017<br>
 		Placa: KLO-5485<br>
 		Modelo: Generic-for-this-trab<br>
-		Cor: Pink<br>
+		Cor: Branco<br>
 		Estado de Conservação: Usado<br>
 		Quilometragem: 120.000 km<br>
 		Tanque de combustivel: 20 Litros restantes<br>
 		
+		<button name="volvo" type="submit" id="volvo" value="volvo" class="btn btn-purple">Efetuar Reserva</button><p></p>
 		
-		<br><a href="#" class="btn btn-purple" >Efetuar Reserva</a>
-		<a href="#" class="btn btn-red" >Cancelar</a>
+		<img src="imagens/camaro.jpg">
+		<br>
+		Nome: Camaro<br>
+		Categoria: Popular<br>
+		Ano: 2017<br>
+		Placa: KYO-5005<br>
+		Modelo: Generic-for-this-trab<br>
+		Cor: Prata<br>
+		Estado de Conservação: Usado<br>
+		Quilometragem: 100.000 km<br>
+		Tanque de combustivel: 30 Litros restantes<br>
+		
+		
+		<br>
+		<button name="camaro" type="submit" id="camaro" value="camaro" class="btn btn-purple">Efetuar Reserva</button><p></p>
+		
+		<img src="imagens/uninho.jpg">
+		<br>
+		Nome: UNO<br>
+		Categoria: Popular<br>
+		Ano: 2017<br>
+		Placa: TRB-1324<br>
+		Modelo: Mile Fire<br>
+		Cor: Branco<br>
+		Estado de Conservação: Usado<br>
+		Quilometragem: 20.000 km<br>
+		Tanque de combustivel: 40 Litros restantes<br>
+		
+		
+		<button name="uno" type="submit" id="uno" value="uno" class="btn btn-purple">Efetuar Reserva</button><p></p>
 		
 		<p>Para mais detalhes consulte nossas lojas!</p>
-		
+	</form>
       </div>
     </div>
 	

@@ -59,7 +59,7 @@ public class LoginDAO {
             
 	        
 
-            /* Se utilizar o padrão singleton, não fechar a conexão. */
+            /* Fechando conex�o */
             comandoSQLp.close();
             
             rs.close();
@@ -75,5 +75,5 @@ public class LoginDAO {
         }
         return null;  
     }
-	
+    
 }

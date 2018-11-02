@@ -20,8 +20,8 @@ public class LoginCheck extends HttpServlet {
     }
     
     //declaração das variaveis q vão receber as variaveis q estão vindo como parametro das requisições abaixo
-    private String uname;
-	private String password;
+    public String uname;
+	public String password;
   
     String[] vetor = null;//vetorzinho para trabalhar o retorno da query feita la no DAO
     
@@ -39,7 +39,7 @@ public class LoginCheck extends HttpServlet {
 	 */
 	//usei o post, pq o form login la da tela INDEX.JSP é do tipo post
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		this.uname=request.getParameter("uname");//parametro uname sendo salvo na variavel dessa classe uname
 		
 		this.password=request.getParameter("password");//parametro password sendo salvo na variavel dessa classe password
