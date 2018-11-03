@@ -1,15 +1,14 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-public class Requests_DAO {
+public class Requests_Cliente_DAO {
 	
 	Connection conexao;
 
-    public Requests_DAO(){
+    public Requests_Cliente_DAO(){
     	
     	//conexão com o banco do DAO GENERICO
         try{
@@ -25,7 +24,7 @@ public class Requests_DAO {
     }
     
     public void adiciona(String carro){  
-        String sql = "INSERT INTO reservas(nome_cliente,nome_carro,categoria,ano,placa,modelo,cor,estado_conservacao,quilometragem,tanque_de_combustivel)"
+        String sql = "INSERT INTO carro_reservado(nome_cliente,nome_carro,categoria,ano,placa,modelo,cor,estado_conservacao,quilometragem,tanque_de_combustivel)"
         		+ "VALUES(?,?,?,?,?,?,?,?,?,?)";  
         try {
         	

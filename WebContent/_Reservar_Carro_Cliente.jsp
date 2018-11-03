@@ -55,7 +55,7 @@
 	  
       <div id="content">
       
-      <form action="Requests" method="post" name="request" id="request">
+      <form action="Servlet_Cliente" method="post" name="request" id="request">
         <!-- mtos conteudos chatos -->
         <h1>Bem vindo ao site Locadora Feliz</h1>
         <p>Temos diversos veiculos para todos os gostos, estilos e bolsos</p>
@@ -90,8 +90,6 @@
 		Quilometragem: 100.000 km<br>
 		Tanque de combustivel: 30 Litros restantes<br>
 		
-		
-		<br>
 		<button name="camaro" type="submit" id="camaro" value="camaro" class="btn btn-purple">Efetuar Reserva</button><p></p>
 		
 		<img src="imagens/uninho.jpg">

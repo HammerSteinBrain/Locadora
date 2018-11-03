@@ -1,5 +1,3 @@
-
-
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,14 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Requests
  */
-@WebServlet("/Requests")
-public class Requests extends HttpServlet {
+@WebServlet("/Servlet_Cliente")
+public class Servlet_Cliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Requests() {
+    public Servlet_Cliente() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,7 +35,7 @@ public class Requests extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Requests_DAO r = new Requests_DAO();
+		Requests_Cliente_DAO r = new Requests_Cliente_DAO();
 		
 		if (request.getParameter("volvo") != null) {
 			this.carro=request.getParameter("volvo");
@@ -54,5 +52,4 @@ public class Requests extends HttpServlet {
 		
 		doGet(request, response);
 	}
-
 }

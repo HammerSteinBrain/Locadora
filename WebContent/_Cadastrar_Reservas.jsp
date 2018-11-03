@@ -64,7 +64,10 @@
         <!-- conteudo -->
         <h1>Cadastrar Reservas</h1>
 		
-		<form>
+		<form name="Servlet_ADM" action="Servlet_ADM" method="post">
+			  CODIGO PARA ESSA RESERVA:<br>
+			  <input type="text" name="codigo_reserva">
+			  <br>
 			  Nome do cliente:<br>
 			  <input type="text" name="nome_cliente"><br>
 			  CPF:<br>
@@ -79,11 +82,14 @@
 			  <input type="text" name="vlr_total_prev"><br>
 			  Carro:<br>
 			  <input type="text" name="carro">
+			  <p></p>
+			  
+			  <input type="submit" name="cadastrar_reservas" value="Cadastrar Reserva" class="btn btn-purple">
+			  <a href="#" class="btn btn-green">Limpar</a>
 		</form>
 		<br>
 		
-		<a href="#" class="btn btn-green" >Cadastrar Reserva</a>
-		<a href="#" class="btn btn-green">Limpar</a>
+		
 		
       </div>
     </div>
