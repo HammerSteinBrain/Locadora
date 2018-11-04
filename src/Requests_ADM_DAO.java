@@ -3,9 +3,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-
 public class Requests_ADM_DAO {
 	
+	//Variaveis
 	Connection conexao;
 
     public Requests_ADM_DAO() throws ClassNotFoundException{
@@ -23,8 +23,12 @@ public class Requests_ADM_DAO {
         }
     }
     
+    //FUNÇÃO ESPECIFICA PARA A PAGINA _CADASTRAR_RESERVAS.JSP
     public void Cadastrar_Reservas(String codigo_reserva,String nome_cliente,String cpf,String telefone,String hr_ini_reserva,String term_reserva,String vlr_total_prev,String carro){  
-        String sql = "INSERT INTO reservas(codigo_reserva,nome_cliente,cpf,telefone,hr_ini_reserva,term_reserva,vlr_total_prev,carro)"
+        
+    	System.out.println(codigo_reserva);
+    	
+    	String sql = "INSERT INTO reservas(codigo_reserva,nome_cliente,cpf,telefone,hr_ini_reserva,term_reserva,vlr_total_prev,carro)"
         		+ "VALUES(?,?,?,?,?,?,?,?)";  
         try {
         	
@@ -45,8 +49,73 @@ public class Requests_ADM_DAO {
             System.out.println(carro);
             
         } catch (SQLException u) {  
-            throw new RuntimeException(u);  
-    }  
-} 
-	
+            throw new RuntimeException(u); 
+    	}
+    	
+    	//System.out.println(codigo_reserva+nome_cliente+cpf+telefone+hr_ini_reserva+term_reserva+vlr_total_prev+carro);
+    }
+    
+    //FUNÇÃO ESPECIFICA PARA A PAGINA _EDITAR_RESERVAS.JSP
+    public void Alterar_Reservas(String codigo_reserva,String nome_cliente,String cpf,String telefone,String hr_ini_reserva,String term_reserva,String vlr_total_prev,String carro){  
+    	
+    	//System.out.println(codigo_reserva);
+    	
+        String sql = "UPDATE reservas SET nome_cliente=?,cpf=?,telefone=?,hr_ini_reserva=?,term_reserva=?,vlr_total_prev=?,carro=? WHERE codigo_reserva= ? ";
+        
+        try {
+        	
+        	PreparedStatement stmt = conexao.prepareStatement(sql);//envia a query para a conexao
+        	
+            stmt.setString(1, nome_cliente);  
+            stmt.setString(2, cpf);  
+            stmt.setString(3, telefone);  
+            stmt.setString(4, hr_ini_reserva);  
+            stmt.setString(5, term_reserva); 
+            stmt.setString(6, vlr_total_prev);
+            stmt.setString(7, carro); 
+            stmt.setString(8, codigo_reserva);
+            
+            stmt.execute();  //executa a query
+            stmt.close(); //fecha a conexao
+            
+            
+        } catch (SQLException u) {  
+            throw new RuntimeException(u); 
+    	}
+    	
+    	System.out.println(codigo_reserva+nome_cliente+cpf+telefone+hr_ini_reserva+term_reserva+vlr_total_prev+carro);
+    }
+    
+    //FUNÇÃO ESPECIFICA PARA A PAGINA _REMOVER_RESERVAS.JSP
+    public void Deletar_Reservas(String codigo_reserva,String nome_cliente,String cpf,String telefone,String hr_ini_reserva,String term_reserva,String vlr_total_prev,String carro){  
+    	
+    	//System.out.println(codigo_reserva);
+    	
+        String sql = "DELETE from reservas where codigo_reserva=?";
+        
+        try {
+        	
+        	PreparedStatement stmt = conexao.prepareStatement(sql);//envia a query para a conexao
+        	
+            stmt.setString(1, codigo_reserva);  
+            
+            /*stmt.setString(1, nome_cliente);
+            stmt.setString(2, cpf);  
+            stmt.setString(3, telefone);  
+            stmt.setString(4, hr_ini_reserva);  
+            stmt.setString(5, term_reserva); 
+            stmt.setString(6, vlr_total_prev);
+            stmt.setString(7, carro); 
+            stmt.setString(8, codigo_reserva);*/
+            
+            stmt.execute();  //executa a query
+            stmt.close(); //fecha a conexao
+            
+            
+        } catch (SQLException u) {  
+            throw new RuntimeException(u); 
+    	}
+    	
+    	//System.out.println(codigo_reserva+nome_cliente+cpf+telefone+hr_ini_reserva+term_reserva+vlr_total_prev+carro);
+    }
 }

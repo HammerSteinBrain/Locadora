@@ -11,6 +11,9 @@
   
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
   <link rel="stylesheet" type="text/css" href="style/menu.css" title="style" />
+
+  <script src="scripts/imprimir.js" type="text/javascript"></script>
+  
 </head>
 
 <body>
@@ -61,11 +64,12 @@
         <h3>Carros Classicos</h3>
         <img src="imagens/img3.jpg">
       </div>
-      <div id="content">
+      
+      <div id='printableArea'>
         <!-- conteudo -->
         <h1>Alugar Carro Reservado</h1>
 
-		<form>
+		<form name="Servlet_ADM" action="Servlet_ADM" method="post">
 			Nome do cliente:<br>
 			<input type="text" name="nome_cliente"><br>
 			CPF:<br>
@@ -85,16 +89,17 @@
 			<input type="text" name="vl_pgto_anteci"><br>
 			Valor Pago na Devolução:<br>
 			<input type="text" name="vl_pgto_devolucao"><br>
+			
+			<input type="submit" name="gerar_contrato" value="Gerar Contrato de Aluguel" class="btn btn-purple"><br>
+			<input type="reset" class="btn btn-purple" value="Limpar"><br>
+			
+			<input type="button" onclick="javascript:document.imprimir.printDiv('printableArea')" value="Imprimir Contrato" class="btn btn-green"><br>
 		</form>
 
 		<br>
-		
-		<a href="#" class="btn btn-green" >Gerar Contrato de Aluguel</a>
-		<a href="#" class="btn btn-green">Cancelar</a>
-		
+	
       </div>
     </div>
-    
     
     <div id="footer">
       <a>Copyright &copy; Locadora Feliz | 2018 | Trabalho de Engenharia de Software Lab</a>

@@ -67,30 +67,30 @@
         
         <h1>Remover Reservas</h1>
 		
-		<form>
-			Codigo da Reserva:<br>
-			<input type="text" name="nome_cliente">
-			<a href="#" class="btn btn-purple" >Procurar pelo codigo</a>
-			<br>
-			Nome do cliente:<br>
-			<input type="text" name="nome_cliente"><br>
-			CPF:<br>
-			<input type="text" name="cpf"><br>
-			Telefone:<br>
-			<input type="text" name="telefone"><br>
-			Hora Inicio da Reserva:<br>
-			<input type="text" name="hr_ini_reserva"><br>
-			Termino Previsto da reserva:<br>
-			<input type="text" name="term_reserva"><br>
-			Valor total previsto:<br>
-			<input type="text" name="vlr_total_prev"><br>
-			Carro:<br>
-			<input type="text" name="carro">
+		<form name="Servlet_ADM" action="Servlet_ADM" method="post">
+			  CODIGO DA RESERVA QUE SERÁ DELETADA:<br>
+			  <input type="text" name="codigo_reserva">
+			  <br>
+			  Nome do cliente:<br>
+			  <input type="text" name="nome_cliente"><br>
+			  CPF:<br>
+			  <input type="text" name="cpf"><br>
+			  Telefone:<br>
+			  <input type="text" name="telefone"><br>
+			  Hora Inicio da Reserva:<br>
+			  <input type="text" name="hr_ini_reserva"><br>
+			  Termino Previsto da reserva:<br>
+			  <input type="text" name="term_reserva"><br>
+			  Valor total previsto:<br>
+			  <input type="text" name="vlr_total_prev"><br>
+			  Carro:<br>
+			  <input type="text" name="carro">
+			  <p></p>
+			  
+			  <input type="submit" name="deletar_reservas" value="Deletar Reserva" class="btn btn-purple">
+			  <input type="reset" class="btn btn-green" value="Limpar">
 		</form>
 		<br>
-		
-		<a href="#" class="btn btn-red" >DELETAR Reserva</a>
-		<a href="#" class="btn btn-green">Limpar</a>
 		
       </div>
     </div>

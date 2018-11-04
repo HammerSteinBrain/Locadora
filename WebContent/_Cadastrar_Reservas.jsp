@@ -85,7 +85,7 @@
 			  <p></p>
 			  
 			  <input type="submit" name="cadastrar_reservas" value="Cadastrar Reserva" class="btn btn-purple">
-			  <a href="#" class="btn btn-green">Limpar</a>
+			  <input type="reset" class="btn btn-green" value="Limpar">
 		</form>
 		<br>
 		

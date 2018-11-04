@@ -9,7 +9,6 @@ function ativarcampo(div){
 	var obj_field=document.getElementById(id_field);
 	obj_field.style.backgroundColor="#FFFFCC";
 }
-
 function liberarcampo(div){
 	div.style.backgroundColor="";
 	div.style.border="";
