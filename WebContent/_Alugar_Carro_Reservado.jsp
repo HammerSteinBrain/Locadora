@@ -93,7 +93,7 @@
 			<input type="submit" name="gerar_contrato" value="Gerar Contrato de Aluguel" class="btn btn-purple"><br>
 			<input type="reset" class="btn btn-purple" value="Limpar"><br>
 			
-			<input type="button" onclick="javascript:document.imprimir.printDiv('printableArea')" value="Imprimir Contrato" class="btn btn-green"><br>
+			<input id ="bot01" type="button" value="Imprimir Contrato" class="btn btn-green"><br>
 		</form>
 
 		<br>
