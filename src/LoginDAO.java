@@ -35,8 +35,6 @@ public class LoginDAO {
             ResultSet rs = comandoSQLp.executeQuery();
             System.out.println("Conectei a tabela login");
             
-            //rs.next();//se for testar o rs.next() com o print, deixar apenas um se n da erro
-            
             //System.out.println(rs.next()); //se for testar o rs.next() com o print, deixar apenas um se n da erro
             
             //System.out.println(rs.getString(2));

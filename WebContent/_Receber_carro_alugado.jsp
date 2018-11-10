@@ -63,33 +63,34 @@
       </div>
       
       <div id="content">
-        <!-- conteudo -->
+        <%-- conteudo --%>
         
         <h1>Editar Reservas</h1>
 		
-		<form>
+		<form name="Servlet_ADM" action="Servlet_ADM" method="post">
 			Codigo do contrato:<br>
-			<input type="text" name="nome_cliente">
-			<a href="#" class="btn btn-purple" >Procurar pelo codigo</a>
+			<input type="text" name="codigo_contrato" value=<%=request.getAttribute("codigo_contrato")%>>
+			<input type="submit" name="proc_codigo" value="Procurar pelo codigo do contrato" class="btn btn-purple">
 			<br>
+			
 			Nome do cliente:<br>
-			<input type="text" name="nome_cliente"><br>
+			<input type="text" name="nome_cliente" value=<%=request.getAttribute("nome_cliente")%>><br>
 			CPF:<br>
-			<input type="text" name="cpf"><br>
+			<input type="text" name="cpf" value=<%=request.getAttribute("cpf")%>><br>
 			Telefone:<br>
-			<input type="text" name="telefone"><br>
+			<input type="text" name="telefone" value=<%=request.getAttribute("telefone")%>><br>
 			Hora Inicio da Reserva:<br>
-			<input type="text" name="hr_ini_reserva"><br>
+			<input type="text" name="hr_ini_reserva" value=<%=request.getAttribute("hr_ini_reserva")%>><br>
 			Carro:<br>
-			<input type="text" name="carro"><br>
+			<input type="text" name="carro" value=<%=request.getAttribute("carro")%>><br>
 			
 			Estado atual de conservação do veiculo:<br>
-			<input type="text" name="status_conser_veiculo">
+			<input type="text" name="status_conser_veiculo" value=<%=request.getAttribute("status_conser_veiculo")%>><br>
+			<p></p>
+			<input type="submit" name="reg_retorno" value="Registrar Retorno do Veiculo" class="btn btn-green">
+			<input type="reset" class="btn btn-green" value="Limpar"><br>
 		</form>
 		<br>
-		
-		<a href="#" class="btn btn-green" >Registrar Retorno do Veiculo</a>
-		<a href="#" class="btn btn-green" >Cancelar</a>
 		
       </div>
     </div>

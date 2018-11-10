@@ -25,7 +25,6 @@
           <h2>Bem Vindo Administrador</h2>
         </div>
       </div>
-      
       		<nav>
 			  <ul class="menu">
 			        <li><a href="Home_adm.jsp">Inicio</a></li>
@@ -70,6 +69,11 @@
         <h1>Alugar Carro Reservado</h1>
 
 		<form name="Servlet_ADM" action="Servlet_ADM" method="post">
+		
+			<%-- nome: <%=request.getAttribute("nome")%> --%>
+			
+			Codigo para esse Contrato:<br>
+			<input type="text" name="codigo_contrato"><br>
 			Nome do cliente:<br>
 			<input type="text" name="nome_cliente"><br>
 			CPF:<br>
@@ -86,7 +90,7 @@
 			Valor total da Reserva:<br>
 			<input type="text" name="vlr_total_res"><br>
 			Valor Pago antecipadamente:<br>
-			<input type="text" name="vl_pgto_anteci"><br>
+			<input type="text" name="vl_pgto_antec"><br>
 			Valor Pago na Devolução:<br>
 			<input type="text" name="vl_pgto_devolucao"><br>
 			
