@@ -1,3 +1,5 @@
+package locadora;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,10 +10,10 @@ public class LoginDAO {
 	
 	Connection conexao;
 	
-	String uname;
+	public String uname;
     
     public LoginDAO(String uname){
-    	
+
     	this.uname = uname;
     	
     	

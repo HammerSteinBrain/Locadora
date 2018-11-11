@@ -1,3 +1,5 @@
+package locadora;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -54,6 +56,47 @@ public class Requests_ADM_DAO {
     	}
     	
     	//System.out.println(codigo_reserva+nome_cliente+cpf+telefone+hr_ini_reserva+term_reserva+vlr_total_prev+carro);
+    }
+    
+  //FUNÇÃO ESPECIFICA PARA A PAGINA _CADASTRAR_Veiculos.JSP
+    public void Cadastrar_Veiculos(
+    		String codigo_veiculo,
+    		String nome_veiculo,
+    		String categoria,
+    		String ano,
+    		String modelo,
+    		String fabricante,
+    		String cor,
+    		String estado_conservacao,
+    		String quilometragem,
+    		String tnq_combustivel
+    		){
+        
+    	System.out.println(codigo_veiculo);
+    	
+    	String sql = "INSERT INTO veiculos(codigo_veiculo,nome_veiculo,categoria,ano,modelo,fabricante,cor,estado_conservacao,quilometragem,tnq_combustivel)"
+        		+ "VALUES(?,?,?,?,?,?,?,?,?,?)";  
+        try {
+        	
+        	PreparedStatement stmt = conexao.prepareStatement(sql);//envia a query para a conexao
+        	
+        	stmt.setString(1, codigo_veiculo);  
+            stmt.setString(2, nome_veiculo);  
+            stmt.setString(3, categoria);  
+            stmt.setString(4, ano);  
+            stmt.setString(5, modelo);  
+            stmt.setString(6, fabricante); 
+            stmt.setString(7, cor);  
+            stmt.setString(8, estado_conservacao);
+            stmt.setString(9, quilometragem);
+            stmt.setString(10, tnq_combustivel);
+            
+            stmt.execute();  //executa a query
+            stmt.close(); //fecha a conexao
+            
+        } catch (SQLException u) {  
+            throw new RuntimeException(u); 
+    	}
     }
     
     //FUNÇÃO ESPECIFICA PARA A PAGINA _EDITAR_RESERVAS.JSP
@@ -261,5 +304,66 @@ public class Requests_ADM_DAO {
         } catch (SQLException u) {  
             throw new RuntimeException(u); 
     	}
+    }
+    
+    //FUNÇÃO ESPECIFICA PARA A PAGINA _EDITAR RESERVAS
+    public String[] Procurar_Reserva(String codigo_reserva){  
+    	try{
+            PreparedStatement stmt = conexao.prepareStatement("SELECT * FROM login.reservas where codigo_reserva = ?");
+            
+            //sql query
+            stmt.setString(1, codigo_reserva);//substitui o 1° ? pela variavel
+            
+            ResultSet rs = stmt.executeQuery();
+            
+            System.out.println("Conectei a tabela reservas");
+            
+            //System.out.println(rs.next()); //se for testar o rs.next() com o print, deixar apenas um se n da erro
+            
+            /*for (int i = 1; i <= 10; i++) {
+            	System.out.println(rs.getString(i));
+			}*/
+            
+            //System.out.println(rs.getString(2));
+            
+            
+            String consulta[] = new String[8];
+            
+            if (rs.next()==true) { // SÓ PODE CHAMAR O RS.NEXT() UMA VEZ!!!!!!!!!!!!!!!!!!!!!!!
+            	//copula os setores do vetor consulta com o parametro corresposnte ao retorn sql
+            	consulta[0] = rs.getString(1);
+    	        consulta[1] = rs.getString(2);
+    	        consulta[2] = rs.getString(3);
+    	        consulta[3] = rs.getString(4);
+    	        consulta[4] = rs.getString(5);
+    	        consulta[5] = rs.getString(6);
+    	        consulta[6] = rs.getString(7);
+    	        consulta[7] = rs.getString(8);
+    	        
+			} else {// caso o rs.next() for false, ou seja, a consulta sql não restornou positivo, copula os setores com nada
+				consulta[0] = "";
+    	        consulta[1] = "";
+    	        consulta[2] = "";
+    	        consulta[3] = "";
+    	        consulta[4] = "";
+    	        consulta[5] = "";
+    	        consulta[6] = "";
+    	        consulta[7] = "";
+			}
+
+            /* Fechando conexão */
+            
+            stmt.close();
+            rs.close();
+            
+            //conexao.close();
+            
+			return consulta;// retorna o vetor carregado com os resultados da busca sql ou vazio
+        }           
+        catch (Exception e)
+        {
+          System.out.print("\nErro de conexao ADM DAO...\n" + e.toString());
+        }
+        return null;
     }
 }

@@ -11,6 +11,9 @@
   
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
   <link rel="stylesheet" type="text/css" href="style/menu.css" title="style" />
+  
+  <script src="scripts/clear.js" type="text/javascript"></script>
+  
 </head>
 
 <body>
@@ -65,30 +68,29 @@
       <div id="content">
         <%-- conteudo --%>
         
-        <h1>Editar Reservas</h1>
+        <h1>Registro de Retorno do Veiculo</h1>
 		
 		<form name="Servlet_ADM" action="Servlet_ADM" method="post">
 			Codigo do contrato:<br>
-			<input type="text" name="codigo_contrato" value=<%=request.getAttribute("codigo_contrato")%>>
+			<input type="text" name="codigo_contrato" id="clear1" value=<%=request.getAttribute("codigo_contrato")%>>
 			<input type="submit" name="proc_codigo" value="Procurar pelo codigo do contrato" class="btn btn-purple">
 			<br>
 			
 			Nome do cliente:<br>
-			<input type="text" name="nome_cliente" value=<%=request.getAttribute("nome_cliente")%>><br>
+			<input type="text" name="nome_cliente" id="clear2" value=<%=request.getAttribute("nome_cliente")%>><br>
 			CPF:<br>
-			<input type="text" name="cpf" value=<%=request.getAttribute("cpf")%>><br>
+			<input type="text" name="cpf" id="clear3" value=<%=request.getAttribute("cpf")%>><br>
 			Telefone:<br>
-			<input type="text" name="telefone" value=<%=request.getAttribute("telefone")%>><br>
+			<input type="text" name="telefone" id="clear4" value=<%=request.getAttribute("telefone")%>><br>
 			Hora Inicio da Reserva:<br>
-			<input type="text" name="hr_ini_reserva" value=<%=request.getAttribute("hr_ini_reserva")%>><br>
+			<input type="text" name="hr_ini_reserva" id="clear5" value=<%=request.getAttribute("hr_ini_reserva")%>><br>
 			Carro:<br>
-			<input type="text" name="carro" value=<%=request.getAttribute("carro")%>><br>
-			
+			<input type="text" name="carro"  id="clear6" value=<%=request.getAttribute("carro")%>><br>
 			Estado atual de conservação do veiculo:<br>
-			<input type="text" name="status_conser_veiculo" value=<%=request.getAttribute("status_conser_veiculo")%>><br>
+			<input type="text" name="status_conser_veiculo" id="clear7" value=<%=request.getAttribute("status_conser_veiculo")%>><br>
 			<p></p>
 			<input type="submit" name="reg_retorno" value="Registrar Retorno do Veiculo" class="btn btn-green">
-			<input type="reset" class="btn btn-green" value="Limpar"><br>
+			<input id ="bot_clear" type="button" value="Limpar" class="btn btn-green">
 		</form>
 		<br>
 		

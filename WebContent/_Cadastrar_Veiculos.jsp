@@ -66,7 +66,9 @@
         
         <h1>Cadastrar Veiculos</h1>
 		
-		<form>
+		<form name="Servlet_ADM" action="Servlet_ADM" method="post">
+			Codigo do Veiculo:<br>
+			<input type="text" name="codigo_veiculo"><br>
 			Nome do Veiculo:<br>
 			<input type="text" name="nome_veiculo"><br>
 			Categoria:<br>
@@ -84,13 +86,11 @@
 			Quilometragem:<br>
 			<input type="text" name="quilometragem"><br>
 			Tanque de combustivel:<br>
-			<input type="text" name="tnq_combustivel">
+			<input type="text" name="tnq_combustivel"><br>
+			
+			<input type="submit" name="cadastrar_veiculos" value="Cadastrar Veiculos" class="btn btn-purple">
+			<input type="reset" class="btn btn-green" value="Limpar">
 		</form>
-		<br>
-		
-		<a href="#" class="btn btn-green" >Cadastrar Veiculo</a>
-		<a href="#" class="btn btn-green" >Cancelar</a>
-		
       </div>
       
     </div>

@@ -1,4 +1,7 @@
+package locadora;
 import java.io.IOException;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +30,13 @@ public class Servlet_Cliente extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Concluido");
+		//response.getWriter().append("Concluido");
+		ServletContext sc = request.getServletContext();
+        try{
+        	sc.getRequestDispatcher("/Home_Cliente.jsp").forward(request,response);            
+        }catch (Exception e){
+        	System.out.println(e.toString());
+        }
 	}
 
 	/**

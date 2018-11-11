@@ -11,8 +11,8 @@
   
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
   <link rel="stylesheet" type="text/css" href="style/menu.css" title="style" />
-
   <script src="scripts/imprimir.js" type="text/javascript"></script>
+  <script src="scripts/clear.js" type="text/javascript"></script>
   
 </head>
 
@@ -73,30 +73,33 @@
 			<%-- nome: <%=request.getAttribute("nome")%> --%>
 			
 			Codigo para esse Contrato:<br>
-			<input type="text" name="codigo_contrato"><br>
+			<input type="text" name="codigo_contrato" id="clear1" value=<%=request.getAttribute("codigo_contrato")%>>
+			<input type="submit" name="proc_cod_cr" value="Buscar Cliente" class="btn btn-purple">
+			<br>
+			
 			Nome do cliente:<br>
-			<input type="text" name="nome_cliente"><br>
+			<input type="text" name="nome_cliente" id="clear2" value=<%=request.getAttribute("nome_cliente")%>><br>
 			CPF:<br>
-			<input type="text" name="cpf"><br>
+			<input type="text" name="cpf" id="clear3" value=<%=request.getAttribute("cpf")%>><br>
 			Telefone:<br>
-			<input type="text" name="telefone"><br>
+			<input type="text" name="telefone" id="clear4" value=<%=request.getAttribute("telefone")%>><br>
 			
 			Carro:<br>
-			<input type="text" name="carro"><br>
+			<input type="text" name="carro" id="clear5"><br>
 			Hora Retirada:<br>
-			<input type="text" name="hr_retirada"><br>
+			<input type="text" name="hr_retirada" id="clear6"><br>
 			Hora devolução:<br>
-			<input type="text" name="hr_devolucao"><br>
+			<input type="text" name="hr_devolucao" id="clear7"><br>
 			Valor total da Reserva:<br>
-			<input type="text" name="vlr_total_res"><br>
+			<input type="text" name="vlr_total_res" id="clear8"><br>
 			Valor Pago antecipadamente:<br>
-			<input type="text" name="vl_pgto_antec"><br>
+			<input type="text" name="vl_pgto_antec" id="clear9"><br>
 			Valor Pago na Devolução:<br>
-			<input type="text" name="vl_pgto_devolucao"><br>
+			<input type="text" name="vl_pgto_devolucao" id="clear10"><br>
 			
-			<input type="submit" name="gerar_contrato" value="Gerar Contrato de Aluguel" class="btn btn-purple"><br>
-			<input type="reset" class="btn btn-purple" value="Limpar"><br>
-			
+			<input type="submit" name="gerar_contrato" value="Gerar Contrato de Aluguel" class="btn btn-purple">
+			<p></p>
+			<input id ="bot_clear" type="button" value="Limpar" class="btn btn-red">
 			<input id ="bot01" type="button" value="Imprimir Contrato" class="btn btn-green"><br>
 		</form>
 

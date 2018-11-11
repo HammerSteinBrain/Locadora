@@ -11,6 +11,9 @@
   
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
   <link rel="stylesheet" type="text/css" href="style/menu.css" title="style" />
+  
+    <script src="scripts/clear.js" type="text/javascript"></script>
+  
 </head>
 
 <body>
@@ -68,26 +71,28 @@
 		
 		<form name="Servlet_ADM" action="Servlet_ADM" method="post">
 			  CODIGO DA RESERVA QUE SERÁ ALTERADA:<br>
-			  <input type="text" name="codigo_reserva">
-			  <br>
+			  <input type="text" name="codigo_reserva" id="clear1" value=<%=request.getAttribute("codigo_reserva")%>>
+			  
+			  <input type="submit" name="proc_reserva" value="Procurar pelo codigo da reserva" class="btn btn-purple"><br>
+			  
 			  Nome do cliente:<br>
-			  <input type="text" name="nome_cliente"><br>
+			  <input type="text" name="nome_cliente" id="clear2" value=<%=request.getAttribute("nome_cliente")%>><br>
 			  CPF:<br>
-			  <input type="text" name="cpf"><br>
+			  <input type="text" name="cpf" id="clear3" value=<%=request.getAttribute("cpf")%>><br>
 			  Telefone:<br>
-			  <input type="text" name="telefone"><br>
+			  <input type="text" name="telefone" id="clear4" value=<%=request.getAttribute("telefone")%>><br>
 			  Hora Inicio da Reserva:<br>
-			  <input type="text" name="hr_ini_reserva"><br>
+			  <input type="text" name="hr_ini_reserva" id="clear5" value=<%=request.getAttribute("hr_ini_reserva")%>><br>
 			  Termino Previsto da reserva:<br>
-			  <input type="text" name="term_reserva"><br>
+			  <input type="text" name="term_reserva" id="clear6" value=<%=request.getAttribute("term_reserva")%>><br>
 			  Valor total previsto:<br>
-			  <input type="text" name="vlr_total_prev"><br>
+			  <input type="text" name="vlr_total_prev" id="clear7" value=<%=request.getAttribute("vlr_total_prev")%>><br>
 			  Carro:<br>
-			  <input type="text" name="carro">
+			  <input type="text" name="carro" id="clear8" value=<%=request.getAttribute("carro")%>>
 			  <p></p>
 			  
 			  <input type="submit" name="editar_reservas" value="Alterar Reserva" class="btn btn-purple">
-			  <input type="reset" class="btn btn-green" value="Limpar">
+			  <input id ="bot_clear" type="button" value="Limpar" class="btn btn-green">
 		</form>
 		<br>
 		

@@ -16,29 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `login`
+-- Table structure for table `retornos`
 --
 
-DROP TABLE IF EXISTS `login`;
+DROP TABLE IF EXISTS `retornos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `login` (
-  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `login` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
-  `adm` int(3) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `retornos` (
+  `codigo_retorno` int(10) NOT NULL,
+  `nome_cliente` varchar(20) DEFAULT NULL,
+  `cpf` varchar(20) DEFAULT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
+  `hr_ini_reserva` varchar(20) DEFAULT NULL,
+  `carro` varchar(20) DEFAULT NULL,
+  `status_conser_veiculo` varchar(20) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `login`
+-- Dumping data for table `retornos`
 --
 
-LOCK TABLES `login` WRITE;
-/*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'admin','1234',1),(2,'usuario','1234',0);
-/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+LOCK TABLES `retornos` WRITE;
+/*!40000 ALTER TABLE `retornos` DISABLE KEYS */;
+INSERT INTO `retornos` VALUES (12345,'Rodrigo','45678945612','1325465789','08:00','uno','usado'),(12345,'Rodrigo','45678945612','1325465789','08:30','uno','usado');
+/*!40000 ALTER TABLE `retornos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-04 20:10:30
+-- Dump completed on 2018-11-11  6:13:50

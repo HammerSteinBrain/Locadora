@@ -16,29 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `login`
+-- Table structure for table `veiculos`
 --
 
-DROP TABLE IF EXISTS `login`;
+DROP TABLE IF EXISTS `veiculos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `login` (
-  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `login` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
-  `adm` int(3) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `veiculos` (
+  `codigo_veiculo` int(20) NOT NULL,
+  `nome_veiculo` varchar(20) DEFAULT NULL,
+  `categoria` varchar(20) DEFAULT NULL,
+  `ano` varchar(20) DEFAULT NULL,
+  `modelo` varchar(20) DEFAULT NULL,
+  `fabricante` varchar(20) DEFAULT NULL,
+  `cor` varchar(20) DEFAULT NULL,
+  `estado_conservacao` varchar(20) DEFAULT NULL,
+  `quilometragem` varchar(20) DEFAULT NULL,
+  `tnq_combustivel` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`codigo_veiculo`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `login`
+-- Dumping data for table `veiculos`
 --
 
-LOCK TABLES `login` WRITE;
-/*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'admin','1234',1),(2,'usuario','1234',0);
-/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+LOCK TABLES `veiculos` WRITE;
+/*!40000 ALTER TABLE `veiculos` DISABLE KEYS */;
+INSERT INTO `veiculos` VALUES (1,'Camaro','Popular','2011','Generic','GM','Prata','Usado','120,00','40 Litros');
+/*!40000 ALTER TABLE `veiculos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-10 20:18:46
+-- Dump completed on 2018-11-11  6:13:51

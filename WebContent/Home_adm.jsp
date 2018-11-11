@@ -14,7 +14,9 @@
 	  
 	<link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
 	<link rel="stylesheet" type="text/css" href="style/menu.css" title="style" />
-  
+	
+	<%@page import="locadora.LoginDAO"%>
+	
 </head>
 
 <body>
@@ -24,7 +26,9 @@
       <div id="logo">
         <div id="logo_text">
           <h1><a href="#"><span class="logo_colour">Locadora Feliz</span></a></h1>
-          <h2>Bem Vindo Administrador</h2>
+         	<h2>
+	            Bem vindo Administrador
+     		</h2>
         </div>
       </div>
       
@@ -60,6 +64,7 @@
     <div id="site_content">
       <div class="sidebar">
         <!-- sidebar itens -->
+        
         <h3>Carros Populares</h3>
         <img src="imagens/img1.jpg">
         <p></p>

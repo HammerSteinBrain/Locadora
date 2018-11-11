@@ -1,3 +1,5 @@
+package locadora;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,10 +22,10 @@ public class LoginCheck extends HttpServlet {
     }
     
     //declaração das variaveis q vão receber as variaveis q estão vindo como parametro das requisições abaixo
-    public String uname;
-	public String password;
+    private String uname;
+	private String password;
   
-    String[] vetor = null;//vetorzinho para trabalhar o retorno da query feita la no DAO
+    public String[] vetor = null;//vetorzinho para trabalhar o retorno da query feita la no DAO
     
 	
 	/**
@@ -44,8 +46,8 @@ public class LoginCheck extends HttpServlet {
 		
 		this.password=request.getParameter("password");//parametro password sendo salvo na variavel dessa classe password
 		
-		
 		LoginDAO login = new LoginDAO(uname);//instancia e envio da variavel dessa classe uname la pra classe DAO
+		
 		
 		//System.out.println(l.procurar_id()[0]); //teste com funcao q retorna um vetor
 		
@@ -68,8 +70,7 @@ public class LoginCheck extends HttpServlet {
 			response.sendRedirect("error.jsp");
 			//erro de autenticacao
 		}
-		
-		
-	}
 
+	}
+	
 }

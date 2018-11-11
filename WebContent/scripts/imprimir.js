@@ -1,5 +1,4 @@
 // JavaScript Document
-
 function printDiv(divName){
 	var conteudo = document.getElementById(divName).innerHTML;
 	var tela_impressao = window.open('about:blank');

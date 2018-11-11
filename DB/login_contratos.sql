@@ -16,33 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `reservas`
+-- Table structure for table `contratos`
 --
 
-DROP TABLE IF EXISTS `reservas`;
+DROP TABLE IF EXISTS `contratos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `reservas` (
-  `codigo_reserva` int(30) NOT NULL,
-  `nome_cliente` varchar(30) NOT NULL,
-  `cpf` varchar(30) NOT NULL,
-  `telefone` varchar(30) NOT NULL,
-  `hr_ini_reserva` varchar(30) NOT NULL,
-  `term_reserva` varchar(30) NOT NULL,
-  `vlr_total_prev` varchar(30) NOT NULL,
-  `carro` varchar(30) NOT NULL,
-  PRIMARY KEY (`codigo_reserva`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `contratos` (
+  `codigo_contrato` int(30) NOT NULL,
+  `nome_cliente` varchar(20) NOT NULL,
+  `cpf` varchar(20) NOT NULL,
+  `telefone` varchar(20) NOT NULL,
+  `carro` varchar(20) NOT NULL,
+  `hr_retirada` varchar(20) NOT NULL,
+  `hr_devolucao` varchar(20) NOT NULL,
+  `vlr_total_res` varchar(20) NOT NULL,
+  `vl_pgto_antec` varchar(20) NOT NULL,
+  `vl_pgto_devolucao` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `reservas`
+-- Dumping data for table `contratos`
 --
 
-LOCK TABLES `reservas` WRITE;
-/*!40000 ALTER TABLE `reservas` DISABLE KEYS */;
-INSERT INTO `reservas` VALUES (12345,'Rodrigo','45611916821','12564645','08:00','17:00','300,00','uno');
-/*!40000 ALTER TABLE `reservas` ENABLE KEYS */;
+LOCK TABLES `contratos` WRITE;
+/*!40000 ALTER TABLE `contratos` DISABLE KEYS */;
+INSERT INTO `contratos` VALUES (12345,'Rodrigo','45678945612','1325465789','uno','08:00','17:00','300,00','150,00','150,00'),(12345,'Rodrigo','45611916821','125646456','uno','03:00','17:00','300','200','120');
+/*!40000 ALTER TABLE `contratos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-10 20:18:47
+-- Dump completed on 2018-11-11  6:13:52
