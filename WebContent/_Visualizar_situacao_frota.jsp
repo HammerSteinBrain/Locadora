@@ -49,7 +49,9 @@
 	</nav>
       
     </div>
+    
     <div id="site_content">
+    
       <div class="sidebar">
         <!-- sidebar itens -->
         <h3>Carros Populares</h3>
@@ -60,46 +62,51 @@
         <h3>Carros Classicos</h3>
         <img src="imagens/img3.jpg">
       </div>
-      
-      <div id="content">
-        <!-- conteudo -->
-        <h2>Visualizar Frota</h2>
-
+   
+	      <div id="content">
+	        <!-- conteudo -->
+	        <h2>Visualizar Frota</h2>
+	
+				<%@ page import="java.sql.*"%>
+				<%@ page import="javax.sql.*"%>
+	
 				<table border="1">
 					<tr>
 						<th>Veiculo</th>
+						<th>Categoria</th>
 						<th>Ano</th>
-						<th>Combustivel</th>
-						<th>Situação</th>
+						<th>Modelo</th>
+						<th>Fabricante</th>
+						<th>Cor</th>
+						<th>Estado Conservação</th>
+						<th>Quilometragem</th>
+						<th>Tanque Combustivel</th>
 					</tr>
-					<tr>
-						<td>Gol</td>
-						<td>2011</td>
-						<td>20 Litros</td>
-						<td>ok</td>
-					</tr>
-					<tr>
-						<td>Fox</td>
-						<td>2014</td>
-						<td>30 Litros</td>
-						<td>Revisado</td>
-					</tr>
-					<tr>
-						<td>Meriva</td>
-						<td>2013</td>
-						<td>Vazio</td>
-						<td>Danificado</td>
-					</tr>
-					<tr>
-						<td>Volvo</td>
-						<td>2017</td>
-						<td>20 Litros</td>
-						<td>Alugado</td>
-					</tr>
+	
+					<%
+						Class.forName("com.mysql.jdbc.Driver"); 
+						java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/login","root","root"); 
+						Statement st= con.createStatement(); 
+						ResultSet rs=st.executeQuery("select * from veiculos"); 
+						while(rs.next())
+						{
+					%>
+						<tr>
+							<td><%=rs.getString(2)%></td>
+							<td><%=rs.getString(3)%></td>
+							<td><%=rs.getString(4)%></td>
+							<td><%=rs.getString(5)%></td>
+							<td><%=rs.getString(6)%></td>
+							<td><%=rs.getString(7)%></td>
+							<td><%=rs.getString(8)%></td>
+							<td><%=rs.getString(9)%></td>
+							<td><%=rs.getString(10)%></td>
+						</tr>
+					<% 
+						}
+					%>
 				</table>
-
-			</div>
-      
+		</div>
     </div>
     <div id="footer">
       <a>Copyright &copy; Locadora Feliz | 2018 | Trabalho de Engenharia de Software Lab</a>

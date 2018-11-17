@@ -23,8 +23,6 @@ public class Servlet_Cliente extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
     
-    public String carro;
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -44,20 +42,52 @@ public class Servlet_Cliente extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Requests_Cliente_DAO r = new Requests_Cliente_DAO();
+		Veiculos v = new Veiculos();
+		
+		Controller_Veiculos con = new Controller_Veiculos();
 		
 		if (request.getParameter("volvo") != null) {
-			this.carro=request.getParameter("volvo");
-			r.adiciona(carro);
+			v.setNome_cliente("usuario");
+			v.setNome_carro("Volvo");
+			v.setCategoria("SUV");
+			v.setAno("2017");
+			v.setModelo("KLO-5485");
+			v.setCor("Branco");
+			v.setEstado_conservacao("Usado");
+			v.setQuilometragem("120.000 km");
+			v.setTnq_combustivel("20 Litros");
+			
+			con.salvar_veiculos(v);
+			
 		}else if (request.getParameter("camaro") != null) {
-			this.carro=request.getParameter("camaro");
-			r.adiciona(carro);
+			v.setNome_cliente("usuario");
+			v.setNome_carro("Camaro");
+			v.setCategoria("Popular");
+			v.setAno("2017");
+			v.setModelo("KYO-5005");
+			v.setCor("Prata");
+			v.setEstado_conservacao("Usado");
+			v.setQuilometragem("100.000 km");
+			v.setTnq_combustivel("30 Litros");
+			
+			con.salvar_veiculos(v);
+			
 		} else {
-			this.carro=request.getParameter("uno");
-			r.adiciona(carro);
+			v.setNome_cliente("usuario");
+			v.setNome_carro("UNO");
+			v.setCategoria("Popular");
+			v.setAno("2017");
+			v.setModelo("Mile-fire");
+			v.setCor("Branco");
+			v.setEstado_conservacao("Usado");
+			v.setQuilometragem("20.000 km");
+			v.setTnq_combustivel("40 Litros");
+			
+			con.salvar_veiculos(v);
+			
 		}
 		
-		//System.out.println(carro);
+
 		
 		doGet(request, response);
 	}
