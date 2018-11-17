@@ -14,6 +14,10 @@
 	  
 	<link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
 	<link rel="stylesheet" type="text/css" href="style/menu.css" title="style" />
+	<link rel="stylesheet" type="text/css" href="style/responsiveslides.css" title="style" />
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="scripts/responsiveslides.min.js" type="text/javascript"></script>
 	  
 </head>
 
@@ -42,26 +46,25 @@
     </div>
 	
     <div id="site_content">
-      <div class="sidebar">
-        <!-- sidebar itens -->
-        <h3>Carros Populares</h3>
-        <img src="imagens/img1.jpg">
-        <p></p>
-        <h3>Carros Eletricos</h3>
-        <img src="imagens/img2.jpg">
-        <h3>Carros Classicos</h3>
-        <img src="imagens/img3.jpg">
-      </div>
+     
+	  <ul class="rslides">
+		  <li><img src="imagens/1.jpg"></li>
+		  <li><img src="imagens/2.jpg"></li>
+		  <li><img src="imagens/3.jpg"></li>
+	  </ul>
+	  
+	  <script>
+		  $(function() {
+		    $(".rslides").responsiveSlides({maxwidth: 800, speed: 800});
+		  }
+		  );
+	 </script>
 	  
       <div id="content">
       
       <form action="Servlet_Cliente" method="post" name="request" id="request">
         <!-- mtos conteudos chatos -->
-        <h1>Bem vindo ao site Locadora Feliz</h1>
-        <p>Temos diversos veiculos para todos os gostos, estilos e bolsos</p>
-		<img src="imagens/img5.jpg">
-		<br>
-		
+
 		<h2>Opções de Veiculos para locação disponiveis</h2>
 		<br>
 		<img src="imagens/volvo.jpg">
