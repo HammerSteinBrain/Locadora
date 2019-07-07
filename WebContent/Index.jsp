@@ -32,6 +32,5 @@
 			</div>
 		  </form>
 		</div>
-	<h1>teste git bash linux mint</h1>
 	</body>
 </html>

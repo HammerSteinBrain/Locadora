@@ -22,7 +22,7 @@
       <div id="logo">
         <div id="logo_text">
           <h1><a href="#"><span class="logo_colour">Locadora Feliz</span></a></h1>
-          <h2>Bem Vindo Administrador teste git</h2>
+          <h2>Bem Vindo Administrador</h2>
         </div>
       </div>
       		<nav>
@@ -109,7 +109,7 @@
     </div>
     
     <div id="footer">
-      <a>Copyright &copy; Locadora Feliz | 2018 | Trabalho de Engenharia de Software Lab</a>
+      <a>Copyright &copy; Locadora Feliz | 2019 | Trabalho de Engenharia de Software</a>
     </div>
   </div>
 </body>

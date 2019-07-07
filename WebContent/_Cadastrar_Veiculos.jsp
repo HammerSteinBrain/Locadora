@@ -95,7 +95,7 @@
       
     </div>
     <div id="footer">
-      <a>Copyright &copy; Locadora Feliz | 2018 | Trabalho de Engenharia de Software Lab</a>
+      <a>Copyright &copy; Locadora Feliz | 2019 | Trabalho de Engenharia de Software</a>
     </div>
   </div>
 </body>
