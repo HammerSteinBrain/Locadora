@@ -42,7 +42,7 @@ Para testar com o usuario para administrador ((usuario: admin e senha: 1234))
 -HIBERNATE
 -Servidor Mysql
 
-## Contruido com:
+## Construido com:
 
 * [ECLIPSE](https://www.eclipse.org/webtools/documentation/) - The ide used
 * [GRADLE](https://docs.gradle.org/current/userguide/userguide.html) - Dependency Management
