@@ -1,7 +1,6 @@
 # Work for software engineering College Discipline - Happy Car Rent Agency
 
 Trabalho para a disciplica de Engenharia de Software 3 e Arquitetura de Sistemas
-Professor Giuliano Bertoti
 
 ### Pre-requisitos
 
